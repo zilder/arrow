@@ -291,8 +291,10 @@ else()
 endif()
 
 if(DEFINED ENV{ARROW_JEMALLOC_URL})
+  message(STATUS "<<<<<<<<<<<<<<<<<<< USE LOCAL JEMALLOC >>>>>>>>>>>>>>>>>>>>")
   set(JEMALLOC_SOURCE_URL "$ENV{ARROW_JEMALLOC_URL}")
 else()
+  message(STATUS "<<<<<<<<<<<<<<<<<<< DOWNLOAD JEMALLOC >>>>>>>>>>>>>>>>>>>>")
   set(JEMALLOC_SOURCE_URL
       "https://github.com/jemalloc/jemalloc/archive/${JEMALLOC_VERSION}.tar.gz")
 endif()
